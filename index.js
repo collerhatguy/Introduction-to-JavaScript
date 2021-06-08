@@ -17,7 +17,8 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 1000;
+if (votingAge >= 18) console.log(true); 
 
 
 /*
@@ -31,7 +32,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let a = 24;
+let b = 24;
+if (a) a += b;
+console.log(a);
 
 
 
@@ -46,7 +50,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+const string = "1999"
+const num = parseInt(string)
+console.log(num);
 
 
 /*
@@ -58,9 +64,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
+multiply(1,2);
 
 
 
@@ -74,9 +81,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
+dogYears(21);
 
 
 
@@ -107,9 +115,19 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if (age >= 1) {
+    if (weight <= 5) return weight * .05;
+    if (weight <= 10) return weight * .04;
+    if (weight <= 15) return weight * .03;
+    return weight * .02;
   }
+  if (age < 1) {
+    if (age >= 2/12 && age <= 4/12) return weight * .10;
+    if (age > 4/12 && age <= 7/12) return weight * .05;
+    if (age > 7/12 && age <= 1) return weight * .04;
+  }
+}
 
 
 
@@ -133,9 +151,15 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+const computerChoice = Math.random()
 function game(user, computer){
-    /*add your code here*/
+   if (user === computer) return "it's a tie";
+   if (user === "paper" && computer === "rock") return "you win!";
+   if (user === "scissors" && computer === "paper") return "you win!";
+   if (user === "rock" && computer === "scissors") return "you win!";
+   if (computer === "paper" && user === "rock") return "you lose!";
+   if (computer === "scissors" && user === "paper") return "you lose!";
+   if (computer === "rock" && user === "scissors") return "you lose!";
 }
   
   
