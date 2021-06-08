@@ -175,9 +175,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+  const mile = km * 0.621371;
+  return mile;
+}
 
 
 
@@ -189,9 +190,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cm){
+  const feet = cm / 30.48;
+  return feet;
+}
  
 
 
@@ -205,8 +207,11 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(start){
+  while(start !== 0) {
+    return `${start} bottles of soda on the wall, ${start} bottles of soda, take one down pass it around ${start - 1} bottles of soda on the wall`;
+    start--;
+  }
   }
 
 
@@ -225,8 +230,12 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if (score < 60) return 'you got an F';
+  if (score <= 69) return 'you got a D';
+  if (score <= 79) return 'you got a C';
+  if (score <= 89) return 'you got a B';
+  if (score <= 100) return 'you got an A' ;
   }
   
   
