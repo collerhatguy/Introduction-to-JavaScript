@@ -253,8 +253,13 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(string) {
+  const vowels = ["a", "e", "u", "i", "o"];
+  let count = 0;
+  for (var i = 0; i < string.length; i++) {
+    if (vowels.includes(string.charAt(i)) || vowels.includes(string.charAt(i).toUpperCase())) count++;
+  }
+  return count;
 }
 
 
